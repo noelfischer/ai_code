@@ -1,0 +1,33 @@
+.div {
+  background: linear-gradient(#08081f, #0d1117);
+  padding: 165px 16px 48px 16px;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('https://github.githubassets.com/static/fonts/github/mona-sans.woff2') format('woff2 supports variations'),
+    url('https://github.githubassets.com/static/fonts/github/mona-sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+.title{
+  color: #fff;
+  font-size: 72px;
+  line-height: 76px;
+  font-weight: 800;
+  text-align: center;
+  font-family: "Mona Sans","Mona Sans Header Fallback",Helvetica,"Segoe UI";
+  font-feature-settings: unset;
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
+.span {
+  background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),#fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
