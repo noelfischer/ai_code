@@ -12,22 +12,114 @@
   font-stretch: 75% 125%;
 }
 
-.title{
+.title {
   color: #fff;
   font-size: 72px;
   line-height: 76px;
   font-weight: 800;
   text-align: center;
-  font-family: "Mona Sans","Mona Sans Header Fallback",Helvetica,"Segoe UI";
+  font-family: "Mona Sans", "Mona Sans Header Fallback", Helvetica, "Segoe UI";
   font-feature-settings: unset;
   letter-spacing: -0.03em;
   overflow-wrap: break-word;
   word-break: keep-all;
 }
 
+.p {
+  color: rgb(125, 133, 144);
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 24px;
+  margin-bottom: 46px;
+  text-align: center;
+  font-family: "Mona Sans", "Mona Sans Header Fallback", Helvetica, "Segoe UI";
+  font-feature-settings: unset;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
 .span {
-  background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%),#fff;
+  background: linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%), #fff;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.btncontainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button1:hover {
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15), 0 100px 80px rgba(255, 255, 255, 0.02), 0 42px 33px rgba(255, 255, 255, 0.024), 0 22px 18px rgba(255, 255, 255, 0.028), 0 12px 10px rgba(255, 255, 255, 0.034), 0 7px 5px rgba(255, 255, 255, 0.04), 0 3px 2px rgba(255, 255, 255, 0.07) !important;
+  background-color: white !important;
+}
+
+.button2:hover {
+  border-width: 2px !important;
+  padding-block: 9px;
+  padding-inline: 29px;
+}
+
+.button2 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button1 {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.container {
+  position: relative;
+  width: 50px;
+  /* Adjust as needed */
+  height: 25px;
+  /* Adjust as needed */
+}
+
+.icon {
+  position: absolute !important;
+  top: 0 !important;
+  width: 40px;
+  /* Adjust as needed */
+  height: 40px;
+  /* Adjust as needed */
+  transition: transform 0.25s ease !important;
+  /* Apply transition to the transform property */
+}
+
+.icon:nth-child(1) {
+  z-index: 3;
+}
+
+.icon:nth-child(2) {
+  z-index: 2;
+}
+
+.icon:nth-child(3) {
+  z-index: 1;
+}
+
+.button1:hover .container .icon:nth-child(1) {
+  transform: translateX(-5px);
+}
+
+.button1:hover .container .icon:nth-child(2) {
+  transform: translateX(5px);
+}
+
+.button1:hover .container .icon:nth-child(3) {
+  transform: translateX(15px);
+}
+
+.button2:hover .container .icon:nth-child(1) {
+  transform: translateX(-5px);
+}
+
+.button2:hover .container .icon:nth-child(2) {
+  transform: translateX(5px);
 }

@@ -39,7 +39,14 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 0,
+          borderRadius: 6,
+          paddingInline: 30,
+          paddingBlock: 10,
+          fontFamily: "Mona Sans,Mona Sans Header Fallback,Helvetica,Segoe UI",
+          fontWeight: 700,
+          fontSize: 20,
+          textTransform: 'none',
+          marginInline: 5,
         },
       },
     },
