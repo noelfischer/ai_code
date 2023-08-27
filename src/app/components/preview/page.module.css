@@ -44,3 +44,52 @@
 .MuiTabs-indicator {
     top: 0 !important;
 }
+
+
+/* comment section */
+
+.commentContainer {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.commentContent {
+    margin-inline: 10px;
+    border: 1px solid #343941;
+    border-radius: 8px;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    background-color: #343941;
+    padding-left: 18px;
+}
+
+.commentUsername {
+    font-weight: bold;
+    margin-right: 8px !important;
+}
+
+.commentTimestamp {
+    color: #b9bbbd;
+}
+
+.commentOptions {
+    margin-left: auto !important;
+}
+
+.commentText {
+    margin-top: 8px;
+    padding: 18px;
+    font-size: 14px !important;
+    animation: typing 10s steps(40), blink-caret 0.75s step-end infinite;
+}
+
+.commentFooter {
+    margin-bottom: 12px;
+    margin-left: 12px;
+}

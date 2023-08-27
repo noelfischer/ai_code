@@ -26,7 +26,6 @@ const theme = createTheme({
     },
     action: {
       selected: '#08081f',
-      hover: '#08081f',
       disabled: '#08081f',
       disabledBackground: '#08081f',
     },
@@ -36,6 +35,14 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontFamily: "Mona Sans,Mona Sans Header Fallback,Helvetica,Segoe UI",
+        }
+      }
+    },
     MuiTab: {
       styleOverrides: {
         root: {
