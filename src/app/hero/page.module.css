@@ -1,6 +1,7 @@
 .div {
   background: linear-gradient(#08081f, #0d1117);
-  padding: 165px 16px 48px 16px;
+  padding: 165px 16px 165px 16px;
+  margin-bottom: 165px;
 }
 
 @font-face {

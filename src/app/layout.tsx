@@ -19,10 +19,10 @@ const theme = createTheme({
   palette: {
     mode: 'dark',
     secondary: {
-      main: '#fff', // your secondary color
+      main: '#ad71f7',
     },
     primary: {
-      main: '#ad71f7', // your primary color
+      main: '#fff',
     },
     action: {
       selected: '#08081f',
@@ -32,10 +32,18 @@ const theme = createTheme({
     },
     background: {
       default: '#08081f',
-      paper: '#08081f',
+      paper: '#161b22',
     },
   },
   components: {
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontFamily: "Mona Sans,Mona Sans Header Fallback,Helvetica,Segoe UI",
+        }
+      }
+    },
     MuiButton: {
       styleOverrides: {
         root: {

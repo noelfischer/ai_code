@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import ThumbsUpDown from '@mui/icons-material/ThumbsUpDown';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import HideOnScroll from "./HideOnScroll";
 
 const pages = ['Products', 'Pricing', 'Blog'];
@@ -37,9 +37,9 @@ function ResponsiveAppBar() {
 
     return (
         <HideOnScroll threshold={200}>
-            <AppBar position="fixed" sx={{paddingInline: 2}} color='transparent'>
-                    <Toolbar disableGutters>
-                        <ThumbsUpDown color='secondary' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <AppBar position="fixed" sx={{paddingInline: 2, backdropFilter: "blur(50px)" }} color='transparent'>
+                    <Toolbar  disableGutters>
+                        <AutoAwesomeIcon color='primary' fontSize='large' sx={{display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                         <Typography
                             variant="h6"
                             noWrap
@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            EXPERT
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -65,7 +65,6 @@ function ResponsiveAppBar() {
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
                                 onClick={handleOpenNavMenu}
-                                color="inherit"
                             >
                                 <MenuIcon />
                             </IconButton>
@@ -94,8 +93,8 @@ function ResponsiveAppBar() {
                                 ))}
                             </Menu>
                         </Box>
-                        <ThumbsUpDown sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                        <Typography
+                        <AutoAwesomeIcon color='primary' fontSize='large' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                        <Typography color='primary'
                             variant="h5"
                             noWrap
                             component="a"
@@ -107,11 +106,10 @@ function ResponsiveAppBar() {
                                 fontFamily: 'monospace',
                                 fontWeight: 700,
                                 letterSpacing: '.3rem',
-                                color: 'inherit',
                                 textDecoration: 'none',
                             }}
                         >
-                            LOGO
+                            EXPERT
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
