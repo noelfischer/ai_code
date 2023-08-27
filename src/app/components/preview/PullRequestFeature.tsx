@@ -66,7 +66,7 @@ const SkeletonContent = () => {
       <TypeAnimation ref={ref3} cursor={false} className={CURSOR_CLASS_NAME} wrapper="div" speed={85} style={{ whiteSpace: 'pre-line' }} sequence={["", 1800,
         '\nTo ensure the algorithm\'s reliability, I recommend including a reset for "colorIndex" within the loop, just before it iterates over the next image. This small adjustment could greatly contribute to the accuracy of the compression process.'
       ]} /></> : <>
-      <Skeleton animation="wave" width={1000} /><Skeleton animation="wave" width={1000} /><Skeleton animation="wave" width={800} />
+      <Skeleton animation="wave" width={"60vw"} sx={{maxWidth: 1000}} /><Skeleton animation="wave" width={"60vw"} sx={{maxWidth: 1000}} /><Skeleton animation="wave" width={"45vw"} sx={{maxWidth: 800}} />
     </>
   );
 }
