@@ -16,7 +16,7 @@ import { TypeAnimation } from 'react-type-animation';
 const theme = createTheme();
 
 const CountUp = () => {
-  const [counter, setCounter] = React.useState(-11);
+  const [counter, setCounter] = React.useState(-8);
   React.useEffect(() => {
     setTimeout(() => setCounter(counter + 3), 3000);
   }, [counter]);
@@ -62,7 +62,7 @@ const SkeletonContent = () => {
       ]} />
       <TypeAnimation ref={ref2} cursor={false} className={CURSOR_CLASS_NAME} wrapper="div" speed={99} style={{ whiteSpace: 'pre-line' }} sequence={["", 1500,
         '\nHowever, as I went through the code, I noticed a subtle concern that deserves attention. In the "handleColorPalettes" function, there seems to be an instance where the variable "colorIndex" isn\'t being reset after each loop iteration. This could potentially lead to unintended color mismatches, especially when processing multiple images sequentially.'
-        , 3200, () => showCursorAnimation(false)]} />
+        , 600, () => showCursorAnimation(false)]} />
       <TypeAnimation ref={ref3} cursor={false} className={CURSOR_CLASS_NAME} wrapper="div" speed={85} style={{ whiteSpace: 'pre-line' }} sequence={["", 1800,
         '\nTo ensure the algorithm\'s reliability, I recommend including a reset for "colorIndex" within the loop, just before it iterates over the next image. This small adjustment could greatly contribute to the accuracy of the compression process.'
       ]} /></> : <>
