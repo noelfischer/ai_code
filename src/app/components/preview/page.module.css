@@ -53,7 +53,6 @@
     position: relative;
     align-items: flex-start;
     padding: 16px;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 .commentContent {
@@ -84,12 +83,41 @@
 
 .commentText {
     margin-top: 8px;
-    padding: 18px;
+    padding: 18px 18px 4px 18px;
     font-size: 14px !important;
     animation: typing 10s steps(40), blink-caret 0.75s step-end infinite;
 }
 
 .commentFooter {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     margin-left: 12px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table tr td {
+    padding: 4px;
+}
+
+.table tr td:first-child {
+    background-color: #21462c;
+}
+
+.table tr td:last-child {
+    background-color: #1b3128;
+    width: 100%;
+}
+
+.red {
+    color: #ff7b72;
+}
+
+.blue {
+    color: #a5d6ff;
+}
+
+.purple {
+    color: #d2a8ff;
 }

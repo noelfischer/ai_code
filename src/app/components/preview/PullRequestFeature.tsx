@@ -66,34 +66,95 @@ const SkeletonContent = () => {
       <TypeAnimation ref={ref3} cursor={false} className={CURSOR_CLASS_NAME} wrapper="div" speed={85} style={{ whiteSpace: 'pre-line' }} sequence={["", 1800,
         '\nTo ensure the algorithm\'s reliability, I recommend including a reset for "colorIndex" within the loop, just before it iterates over the next image. This small adjustment could greatly contribute to the accuracy of the compression process.'
       ]} /></> : <>
-      <Skeleton animation="wave" width={"60vw"} sx={{maxWidth: 1000}} /><Skeleton animation="wave" width={"60vw"} sx={{maxWidth: 1000}} /><Skeleton animation="wave" width={"45vw"} sx={{maxWidth: 800}} />
+      <Skeleton animation="wave" width={"60vw"} sx={{ maxWidth: 1000 }} /><Skeleton animation="wave" width={"60vw"} sx={{ maxWidth: 1000 }} /><Skeleton animation="wave" width={"45vw"} sx={{ maxWidth: 800 }} />
     </>
   );
+}
+
+const SecondComment = () => {
+  const [loaded, setLoaded] = useState(0);
+  React.useEffect(() => {
+    setTimeout(() => setLoaded(1), 10000);
+    setTimeout(() => setLoaded(2), 12000);
+  }, []);
+
+  return (
+    loaded > 0 ?
+      <Box sx={{ borderLeft: "1px solid #343941", marginLeft: "26px", paddingBlock: 2, maxWidth: 750 }}>
+        <Box className={styles.commentContent} sx={{ marginLeft: 3 }}>
+          <Box className={styles.commentHeader}>
+            <Typography variant="body2" className={styles.commentUsername} sx={{ padding: 1 }}>
+              <pre>src/image_compression.py</pre>
+            </Typography>
+          </Box>
+          <table className={styles.table}>
+            <tr>
+              <td><pre>          191 </pre></td>
+              <td><pre> +     <span className={styles.red}>for</span> image <span className={styles.blue}>in</span> images:</pre></td>
+            </tr>
+            <tr>
+              <td><pre>          192 </pre></td>
+              <td><pre> +         <span className={styles.purple}>handleColorPalettes</span>(image)</pre></td>
+            </tr>
+            <tr>
+              <td><pre>          193 </pre></td>
+              <td><pre> +         <span className={styles.purple}>applyCompression</span>(image)</pre></td>
+            </tr>
+            <tr>
+              <td><pre>          194 </pre></td>
+              <td><pre> +         <span className={styles.purple}>saveCompressedImage</span>(image)</pre></td>
+            </tr>
+          </table>
+          <Box className={styles.commentContainer} sx={{ paddingBottom: 0.5, paddingTop: 0.5, paddingRight: 0.5, alignItems: "center" }}>
+            <Typography variant="body2" className={styles.commentUsername}>
+              <AutoAwesomeIcon fontSize='small' sx={{ height: 12, transform: "scale(1.5)" }} /> AIExpert
+            </Typography>
+            <Typography variant="body2" className={styles.commentTimestamp}>
+              <CountUp />
+            </Typography>
+            <IconButton className={styles.commentOptions} >
+              <MoreVertIcon />
+            </IconButton>
+          </Box>
+          <Typography variant="body2" className={styles.commentText} sx={{ paddingTop: 0, marginInline: "2px" }}>
+            {loaded > 1 ? "Reset colorIndex within the loop to ensure accurate compression across multiple images." : <Skeleton />}
+          </Typography>
+          <Box className={styles.commentFooter}>
+            <IconButton>
+              <AddReactionOutlinedIcon fontSize='small' />
+            </IconButton>
+          </Box>
+        </Box>
+      </Box> : <></>
+  )
 }
 
 const ConversationTabContent = () => (
   <Box className={styles.commentContainer}>
     <Avatar alt="AIExpert" src="user-avatar.jpg" />
-    <Box className={styles.commentContent}>
-      <Box className={styles.commentHeader}>
-        <Typography variant="body2" className={styles.commentUsername}>
-          <AutoAwesomeIcon fontSize='small' sx={{ height: 12, transform: "scale(1.5)" }} /> AIExpert
+    <Box>
+      <Box className={styles.commentContent}>
+        <Box className={styles.commentHeader}>
+          <Typography variant="body2" className={styles.commentUsername}>
+            <AutoAwesomeIcon fontSize='small' sx={{ height: 12, transform: "scale(1.5)" }} /> AIExpert
+          </Typography>
+          <Typography variant="body2" className={styles.commentTimestamp}>
+            <CountUp />
+          </Typography>
+          <IconButton className={styles.commentOptions}>
+            <MoreVertIcon />
+          </IconButton>
+        </Box>
+        <Typography variant="body1" className={styles.commentText}>
+          <SkeletonContent />
         </Typography>
-        <Typography variant="body2" className={styles.commentTimestamp}>
-          <CountUp />
-        </Typography>
-        <IconButton className={styles.commentOptions}>
-          <MoreVertIcon />
-        </IconButton>
+        <Box className={styles.commentFooter}>
+          <IconButton>
+            <AddReactionOutlinedIcon fontSize='small' />
+          </IconButton>
+        </Box>
       </Box>
-      <Typography variant="body1" className={styles.commentText}>
-        <SkeletonContent />
-      </Typography>
-      <Box className={styles.commentFooter}>
-        <IconButton className={styles.commentReaction}>
-          <AddReactionOutlinedIcon />
-        </IconButton>
-      </Box>
+      <SecondComment />
     </Box>
   </Box>
 );
