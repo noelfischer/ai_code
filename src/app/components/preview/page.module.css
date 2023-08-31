@@ -121,3 +121,19 @@
 .purple {
     color: #d2a8ff;
 }
+
+
+/* files changed section */
+
+.dirText span {
+    font-size: 14px !important;
+}
+
+.expandIcon {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+.fileIcon {
+    float: right;
+}

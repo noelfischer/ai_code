@@ -65,6 +65,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          paddingInline: 15,
+          paddingBlock: 5,
+        },
+      },
+    },
   },
 })
 
