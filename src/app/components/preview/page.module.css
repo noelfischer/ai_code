@@ -125,6 +125,7 @@
 
 /* files changed section */
 
+
 .dirText span {
     font-size: 14px !important;
 }
@@ -136,4 +137,38 @@
 
 .fileIcon {
     float: right;
+}
+
+.checkbox {
+    border: 1px solid #343941;
+    border-radius: 4px;
+}
+
+.checkbox span {
+    font-size: 12px !important;
+    color: #848b96;
+}
+
+.darkGrey {
+    color: #b9bbbd
+}
+
+.fileHeader {
+    background-color: #343941;
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.green {
+    width: 8px;
+    height: 8px;
+    background-color: #3fb950;
+}
+
+.neutral {
+    width: 8px;
+    height: 8px;
+    background-color: #393f47;
+    border: 0.5px solid #4b535c;
+
 }
