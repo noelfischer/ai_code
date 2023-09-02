@@ -140,7 +140,7 @@ const SecondComment = () => {
     )
 }
 
-const CountUp = () => {
+export const CountUp = () => {
     const [counter, setCounter] = React.useState(-8);
     React.useEffect(() => {
         setTimeout(() => setCounter(counter + 3), 3000);
