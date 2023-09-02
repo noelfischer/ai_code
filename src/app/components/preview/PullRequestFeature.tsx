@@ -45,10 +45,10 @@ const PullRequestFeature = () => {
               }
             >
               <Tab icon={<QuestionAnswerOutlinedIcon className={styles.svg} />} iconPosition="start" label={
-                <>Conversation <span className={styles.badge}>5</span></>
+                <>Conversation <span className={styles.badge}>2</span></>
               } className={styles.tab}></Tab>
               <Tab icon={<DifferenceOutlinedIcon className={styles.svg} />} iconPosition="start" label={
-                <>Files changed <span className={styles.badge}>2</span></>
+                <>Files changed <span className={styles.badge}>1</span></>
               } className={styles.tab} />
             </Tabs>
           </Paper>
