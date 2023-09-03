@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('https://github.githubassets.com/static/fonts/github/mona-sans.woff2') format('woff2 supports variations'),
+        url('https://github.githubassets.com/static/fonts/github/mona-sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+.h1 {
+    color: #fff;
+    font-size: 48px !important;
+    font-family: "Mona Sans", "Mona Sans Header Fallback", Helvetica, "Segoe UI";
+    letter-spacing: -0.04em !important;
+}
+
+.spacingBottom {
+    margin-bottom: 30px !important;
+}
+
+.button {
+    margin-top: 20px !important;
+}
+
+.div {
+    background: linear-gradient(#0a0a25, #0d1117);
+    height: 100vh !important;
+}
+
+
+.backgroundImage {
+    background-image: url('canvas.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

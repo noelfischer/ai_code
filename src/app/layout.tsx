@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext';
 import { ThemeProvider, createTheme } from '@mui/material';
 import ResponsiveAppBar from './nav/ResponsiveAppBar';
+import { usePathname } from 'next/navigation';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -76,17 +77,15 @@ const theme = createTheme({
   },
 })
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
+  const pathName = usePathname();
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <AuthContextProvider>
           <ThemeProvider theme={theme}>
-            <ResponsiveAppBar />
+            {!pathName.startsWith("/signup") ? <ResponsiveAppBar /> : <></>}
             {children}
           </ThemeProvider>
         </AuthContextProvider>
