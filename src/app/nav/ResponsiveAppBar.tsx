@@ -12,13 +12,16 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import HideOnScroll from "./HideOnScroll";
+import { useRouter } from 'next/navigation';
 
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Login'];
+const settings = ['Profile', 'Account', 'Login', 'Sign up'];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+    const router = useRouter();
+
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
@@ -34,6 +37,10 @@ function ResponsiveAppBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+
+    const signUp = () => {
+        router.push('/signup');
+    }
 
     return (
         <HideOnScroll threshold={200}>
@@ -146,7 +153,7 @@ function ResponsiveAppBar() {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                <MenuItem key={setting} onClick={signUp}>
                                     <Typography textAlign="center">{setting}</Typography>
                                 </MenuItem>
                             ))}
