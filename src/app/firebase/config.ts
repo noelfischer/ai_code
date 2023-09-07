@@ -11,13 +11,13 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDeyA84YRcoo6PxsWNwgwyHmyrgpn3glt0",
-  authDomain: "template-login-app.firebaseapp.com",
-  projectId: "template-login-app",
-  storageBucket: "template-login-app.appspot.com",
-  messagingSenderId: "537128652810",
-  appId: "1:537128652810:web:0c048f71cd9441b5bbcff3",
-  measurementId: "G-DEW9H973F4"
+  apiKey: "AIzaSyAl8AgqVfxYilLj0Ai_-QopQPkSRzekUvk",
+  authDomain: "ai-code-review.firebaseapp.com",
+  projectId: "ai-code-review",
+  storageBucket: "ai-code-review.appspot.com",
+  messagingSenderId: "1027298732213",
+  appId: "1:1027298732213:web:3b69bdbb892fe9f13136fc",
+  measurementId: "G-MPBFK9LS5K"
 };
 
 
