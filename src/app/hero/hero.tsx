@@ -12,7 +12,7 @@ export default function Hero() {
 
     return (
         <div className={styles.div}>
-            <h1 className={styles.title + " palette.text.primary"}>Get reviews <span className={styles.span}>instantly</span><br />with Codexpert</h1>
+            <h1 className={styles.title + " palette.text.primary"}>Get reviews <span className={styles.span}>instantly</span><br />with AI Expert</h1>
             <p className={styles.p}>Open a pull request and get valuable insights on bugs and problems<br /> with suggested code solutions in seconds.</p>
             <div className={styles.btncontainer}>
                 <Button onClick={handleGetStarted} className={styles.button1} variant="contained" color='primary' endIcon={

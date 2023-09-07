@@ -2,27 +2,35 @@
 import React from "react";
 import signUp from "../firebase/auth/signup";
 import { useRouter } from 'next/navigation';
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Alert, Box, Button, Collapse, IconButton, TextField, Typography } from "@mui/material";
 import { ArrowForwardIosOutlined, EmailOutlined, LockOutlined } from "@mui/icons-material";
-import styles from './page.module.css'
+import CloseIcon from '@mui/icons-material/Close';
+import styles from './page.module.css';
 
 function Page() {
-    const [email, setEmail] = React.useState('')
-    const [password, setPassword] = React.useState('')
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [open, setOpen] = React.useState(false);
+    const [displayError, setDisplayError] = React.useState("");
     const router = useRouter()
 
     const handleForm = async (event: any) => {
         event.preventDefault()
 
-        const { result, error } = await signUp(email, password);
+        const { result, error }: any = await signUp(email, password);
 
         if (error) {
-            return console.log(error)
+            const message = error.message.replace("Firebase: ", "").replace("auth/", "").replaceAll("-", " ");
+            setDisplayError(message);
+            setOpen(true);
+            console.log(error.code);
+            console.log("error");
+            return console.log(message);
         }
 
         // else successful
         console.log(result)
-        return router.push("/admin")
+        return router.push("/success")
     }
     return (
         <Box className={styles.div + " " + styles.backgroundImage}>
@@ -37,7 +45,26 @@ function Page() {
                         <LockOutlined sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                         <TextField fullWidth onChange={(e) => setPassword(e.target.value)} label="Password" variant="standard" required type="password" name="password" id="password" />
                     </Box>
-                    <Button fullWidth className={styles.button} variant="contained" endIcon={<ArrowForwardIosOutlined />}>Sign Up</Button>
+                    <Collapse in={open}>
+                        <Alert severity="error"
+                            action={
+                                <IconButton
+                                    aria-label="close"
+                                    color="inherit"
+                                    size="small"
+                                    onClick={() => {
+                                        setOpen(false);
+                                    }}
+                                >
+                                    <CloseIcon fontSize="inherit" />
+                                </IconButton>
+                            }
+                            sx={{ mb: 2 }}
+                        >
+                            {displayError}
+                        </Alert>
+                    </Collapse>
+                    <Button fullWidth onClick={handleForm} className={styles.button} variant="contained" endIcon={<ArrowForwardIosOutlined />}>Sign Up</Button>
                 </Box>
             </Box>
         </Box>
