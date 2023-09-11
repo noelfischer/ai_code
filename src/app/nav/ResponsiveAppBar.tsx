@@ -14,7 +14,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import HideOnScroll from "./HideOnScroll";
 import { useRouter } from 'next/navigation';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Get started', 'Products', 'Blog'];
 const settings = ['Profile', 'Account', 'Login', 'Sign up'];
 
 function ResponsiveAppBar() {
@@ -31,6 +31,7 @@ function ResponsiveAppBar() {
     };
 
     const handleCloseNavMenu = () => {
+        router.push('/signup');
         setAnchorElNav(null);
     };
 
@@ -62,7 +63,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        REVIEWER
+                        EXPERT
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -116,7 +117,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        REVIEWER
+                        EXPERT
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
