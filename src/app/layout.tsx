@@ -107,7 +107,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:url" content={metadata.url} />
-        <link rel="canonical" href={metadata.url} />
+        <link rel="canonical" href={metadata.url + pathName} />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
