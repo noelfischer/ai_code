@@ -1,5 +1,5 @@
 {
-  "name": "template_login",
+  "name": "ai_code",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,12 +14,15 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
     "@types/react": "^18.2.20",
-    "firebase": "^10.1.0",
+    "encoding": "^0.1.13",
+    "firebase": "^10.3.1",
     "next": "^13.4.13",
     "react-awesome-reveal": "^4.2.5",
     "react-type-animation": "^3.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-next": "^13.4.19",
     "typescript": "5.1.6"
   }
 }

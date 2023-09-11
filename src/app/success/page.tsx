@@ -15,16 +15,16 @@ function Page() {
           Welcome to the AIEX Community!
         </Typography>
         <Typography className={styles.p}>
-          We're thrilled that you've joined our AI-powered code review journey.
+          We&apos;re thrilled that you&apos;ve joined our AI-powered code review journey.
           Your interest in making code reviews smarter is a big step towards more efficient and effective development.
         </Typography>
         <Typography variant="h4" className={styles.h4}>
-          What's Next?
+          What&apos;s Next?
         </Typography>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} sm={6} md={4}>
             <Typography className={styles.p}>
-              <Typography variant="h5" className={styles.h5}>🌟 <span className={styles.span}>Exclusive Access</span></Typography> As a valued member, you'll enjoy exclusive access to AI-generated code reviews and insightful articles
+              <Typography variant="h5" className={styles.h5}>🌟 <span className={styles.span}>Exclusive Access</span></Typography> As a valued member, you&apos;ll enjoy exclusive access to AI-generated code reviews and insightful articles
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
@@ -34,7 +34,7 @@ function Page() {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Typography className={styles.p}>
-              <Typography variant="h5" className={styles.h5}>💬 <span className={styles.span}>Feedback Matters</span></Typography> We value your feedback. In the coming weeks, we'll reach out to gather your thoughts and insights to improve AI Expert.
+              <Typography variant="h5" className={styles.h5}>💬 <span className={styles.span}>Feedback Matters</span></Typography> We value your feedback. In the coming weeks, we&apos;ll reach out to gather your thoughts and insights to improve AI Expert.
             </Typography>
           </Grid>
         </Grid>
@@ -49,7 +49,7 @@ function Page() {
         <Button variant="outlined" color="primary" className={styles.social} startIcon={<InstagramIcon />}>Instagram</Button>
         <Box className={styles.regards}>
           <Typography className={styles.p}>
-            Thank you for being an early supporter of AIEX. We can't wait to embark on this exciting journey with you!<br /><br />
+            Thank you for being an early supporter of AIEX. We can&apos;t wait to embark on this exciting journey with you!<br /><br />
           </Typography>
           <Typography className={styles.p}>
             Warm regards, <br />

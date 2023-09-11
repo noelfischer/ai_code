@@ -110,7 +110,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <link rel="canonical" href={metadata.url} />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </head>
       <body className={inter.className}>
         <AuthContextProvider>

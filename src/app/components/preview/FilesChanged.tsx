@@ -161,7 +161,7 @@ const CodeTable = () => {
                         </Box>
                         {loaded > 0 ? <>
                             <Typography variant="body2" className={styles.commentText} sx={{ paddingTop: 0, marginInline: "2px" }}>
-                                In the loop that processes each input line, you're currently calling the <b>process_text</b>` function without removing potential leading or trailing whitespace. This could inadvertently affect the output if there are any extra spaces.<br /><br />
+                                In the loop that processes each input line, you&apos;re currently calling the `<b>process_text</b>` function without removing potential leading or trailing whitespace. This could inadvertently affect the output if there are any extra spaces.<br /><br />
                                 To ensure consistent results, I suggest using the `<b>strip()</b>` function on the line before passing it to `<b>process_text</b>`. This will remove any extra whitespace before converting the text to lowercase, guaranteeing accurate and expected outcomes.
                             </Typography>
                             {loaded > 1 ? <Box sx={{ border: "1px solid #343941", borderRadius: 1, marginInline: 2, marginBlock: 1 }}>
