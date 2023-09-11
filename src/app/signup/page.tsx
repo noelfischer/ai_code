@@ -64,7 +64,7 @@ function Page() {
                             {displayError}
                         </Alert>
                     </Collapse>
-                    <Button fullWidth onClick={handleForm} className={styles.button} variant="contained" endIcon={<ArrowForwardIosOutlined />}>Sign Up</Button>
+                    <Button fullWidth onClick={handleForm} className={styles.button} variant="contained" endIcon={<ArrowForwardIosOutlined />} aria-label="Sign Up">Sign Up</Button>
                 </Box>
             </Box>
         </Box>

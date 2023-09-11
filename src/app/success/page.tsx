@@ -44,9 +44,9 @@ function Page() {
         <Typography className={styles.p}>
           Follow us on social media to stay updated on the latest AIEX news, tips, and success stories:
         </Typography>
-        <Button variant="outlined" color="primary" className={styles.social} startIcon={<TwitterIcon />}>Twitter</Button>
-        <Button variant="outlined" color="primary" className={styles.social} startIcon={<FacebookIcon />}>Facebook</Button>
-        <Button variant="outlined" color="primary" className={styles.social} startIcon={<InstagramIcon />}>Instagram</Button>
+        <Button variant="outlined" color="primary" className={styles.social} startIcon={<TwitterIcon />} aria-label="Twitter">Twitter</Button>
+        <Button variant="outlined" color="primary" className={styles.social} startIcon={<FacebookIcon />} aria-label="Facebook">Facebook</Button>
+        <Button variant="outlined" color="primary" className={styles.social} startIcon={<InstagramIcon />} aria-label="Instagram">Instagram</Button>
         <Box className={styles.regards}>
           <Typography className={styles.p}>
             Thank you for being an early supporter of AIEX. We can&apos;t wait to embark on this exciting journey with you!<br /><br />

@@ -1,5 +1,11 @@
 .container {
     border-radius: 12px 12px 0 0;
+    min-width: 635px;
+}
+
+.PRFeature {
+    overflow-x: auto;
+    margin-bottom: 16px;
 }
 
 .glow {
@@ -14,6 +20,7 @@
 
 .content {
     background-color: #24292f !important;
+    min-width: 635px;
 }
 
 .tab[aria-selected="true"] {

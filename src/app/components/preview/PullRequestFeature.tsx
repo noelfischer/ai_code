@@ -31,7 +31,7 @@ const PullRequestFeature = () => {
     <>
       <div className={styles.glow}></div>
       <Reveal fraction={0.5} duration={400} keyframes={customAnimation} triggerOnce>
-        <Container>
+        <Container className={styles.PRFeature}>
           <Paper elevation={0} className={styles.container} square>
             <Tabs
               value={selectedTab}

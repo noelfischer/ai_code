@@ -26,14 +26,16 @@ export default function Hero() {
                         <ArrowForwardIosIcon className={styles.icon} />
                         <ArrowForwardIosIcon className={styles.icon} />
                         <ArrowForwardIosIcon className={styles.icon} />
-                    </div>}>
+                    </div>}
+                    aria-label="Get started">
                     Get started
                 </Button>
                 <Button onClick={handleClick} className={styles.button2} variant='outlined' color='primary' endIcon={
                     <div className={styles.container}>
                         <ArrowForwardIosIcon className={styles.icon} />
                         <ArrowForwardIosIcon className={styles.icon} />
-                    </div>}>
+                    </div>}
+                    aria-label="Learn more">
                     Learn more
                 </Button>
             </div>

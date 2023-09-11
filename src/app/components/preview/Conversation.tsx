@@ -8,7 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 export const ConversationTabContent = () => (
     <Box className={styles.commentContainer}>
-        <Avatar alt="AIExpert" src="user-avatar.jpg" />
+        <Avatar sx={{ bgcolor: "#b3b3cc" }}>A</Avatar>
         <Box>
             <Box className={styles.commentContent}>
                 <Box className={styles.commentHeader}>
@@ -18,7 +18,7 @@ export const ConversationTabContent = () => (
                     <Typography variant="body2" className={styles.commentTimestamp}>
                         <CountUp />
                     </Typography>
-                    <IconButton className={styles.commentOptions}>
+                    <IconButton aria-label='More' className={styles.commentOptions}>
                         <MoreVertIcon />
                     </IconButton>
                 </Box>
@@ -26,7 +26,7 @@ export const ConversationTabContent = () => (
                     <SkeletonContent />
                 </Typography>
                 <Box className={styles.commentFooter}>
-                    <IconButton>
+                    <IconButton aria-label='Add Reaction'>
                         <AddReactionOutlinedIcon fontSize='small' />
                     </IconButton>
                 </Box>
@@ -123,7 +123,7 @@ const SecondComment = () => {
                         <Typography variant="body2" className={styles.commentTimestamp}>
                             <CountUp />
                         </Typography>
-                        <IconButton className={styles.commentOptions} >
+                        <IconButton aria-label='More' className={styles.commentOptions} >
                             <MoreVertIcon />
                         </IconButton>
                     </Box>
@@ -131,7 +131,7 @@ const SecondComment = () => {
                         {loaded > 1 ? "Reset colorIndex within the loop to ensure accurate compression across multiple images." : <Skeleton />}
                     </Typography>
                     <Box className={styles.commentFooter}>
-                        <IconButton>
+                        <IconButton aria-label='Add Reaction'>
                             <AddReactionOutlinedIcon fontSize='small' />
                         </IconButton>
                     </Box>

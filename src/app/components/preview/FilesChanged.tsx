@@ -29,13 +29,13 @@ export const FilesChangedTabContent = () => {
                     <TextField fullWidth size="small" variant="standard" label="Filter changed files" className={styles.fileSearch} />
                 </Box>
                 <Box className={styles.file}>
-                    <ListItemButton onClick={handleClick}>
+                    <ListItemButton aria-label='Source' onClick={handleClick}>
                         <ListItemIcon><>{open ? <ExpandMore fontSize='small' className={styles.expandIcon} /> : <ChevronRightIcon fontSize='small' className={styles.expandIcon} />}<FolderOpenOutlinedIcon fontSize='small' /></></ListItemIcon>
                         <ListItemText className={styles.dirText}>src</ListItemText>
                     </ListItemButton>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                            <ListItemButton sx={{ ml: 3, pl: 4, borderLeft: "1px solid #343941" }}>
+                            <ListItemButton aria-label='file name' sx={{ ml: 3, pl: 4, borderLeft: "1px solid #343941" }}>
                                 <ListItemIcon sx={{ minWidth: 28 }}>
                                     <InsertDriveFileOutlinedIcon className={styles.fileIcon} fontSize='small' />
                                 </ListItemIcon>
@@ -48,8 +48,8 @@ export const FilesChangedTabContent = () => {
             <Box sx={{ width: "100%" }}>
                 <Stack direction="row" alignItems="center" className={styles.fileHeader}>
                     <Stack direction="row" spacing={1} alignItems="center">
-                        <IconButton><ExpandMore fontSize='small' className={styles.darkGrey} /></IconButton>
-                        <IconButton><ExpandOutlinedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
+                        <IconButton aria-label='More'><ExpandMore fontSize='small' className={styles.darkGrey} /></IconButton>
+                        <IconButton aria-label='Expand'><ExpandOutlinedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
                         <Typography className={styles.darkGrey} sx={{ fontSize: 12 }}><pre>40</pre></Typography>
                         <Stack direction="row" spacing={"1px"} alignItems="center">
                             <Box className={styles.green} />
@@ -59,12 +59,12 @@ export const FilesChangedTabContent = () => {
                             <Box className={styles.neutral} />
                         </Stack>
                         <Typography sx={{ fontSize: 15 }}><pre>src/image_compression.py</pre></Typography>
-                        <IconButton><ContentCopyRoundedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
+                        <IconButton aria-label='Copy'><ContentCopyRoundedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
                     </Stack>
                     <Stack direction="row" spacing={0} alignItems="center" sx={{ width: "100%" }} justifyContent="flex-end">
                         <FormControlLabel className={styles.checkbox} control={<Checkbox size="small" />} label="Viewed" />
-                        <IconButton><ChatBubbleOutlineOutlinedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
-                        <IconButton><MoreVertIcon fontSize='small' className={styles.darkGrey} /></IconButton>
+                        <IconButton aria-label='Comment'><ChatBubbleOutlineOutlinedIcon fontSize='small' className={styles.darkGrey} /></IconButton>
+                        <IconButton aria-label='More'><MoreVertIcon fontSize='small' className={styles.darkGrey} /></IconButton>
                     </Stack>
                 </Stack>
                 <CodeTable />
@@ -155,7 +155,7 @@ const CodeTable = () => {
                             <Typography variant="body2" className={styles.commentTimestamp}>
                                 <CountUp />
                             </Typography>
-                            <IconButton className={styles.commentOptions} >
+                            <IconButton aria-label='More' className={styles.commentOptions} >
                                 <MoreVertIcon />
                             </IconButton>
                         </Box>
@@ -180,7 +180,7 @@ const CodeTable = () => {
                                 </table>
                             </Box> : <Skeleton sx={{ margin: 2.5 }} />}
                             <Box className={styles.commentFooter}>
-                                <IconButton>
+                                <IconButton aria-label='Add Reaction'>
                                     <AddReactionOutlinedIcon fontSize='small' />
                                 </IconButton>
                             </Box>
