@@ -88,8 +88,8 @@ function ResponsiveAppBar() {
                             }}
                         >
                             {pages.map((page) => (
-                                <a href='/signup'>
-                                    <MenuItem key={page}>
+                                <a href='/signup' key={page}>
+                                    <MenuItem>
                                         <Typography textAlign="center">{page}</Typography>
                                     </MenuItem>
                                 </a>
@@ -150,8 +150,8 @@ function ResponsiveAppBar() {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <a href='/signup'>
-                                    <MenuItem key={setting}>
+                                <a href='/signup' key={setting}>
+                                    <MenuItem>
                                         <Typography textAlign="center">{setting}</Typography>
                                     </MenuItem>
                                 </a>
