@@ -12,7 +12,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import HideOnScroll from "./HideOnScroll";
-import { useRouter } from 'next/navigation';
 
 const pages = ['Get started', 'Products', 'Blog'];
 const settings = ['Profile', 'Account', 'Login', 'Sign up'];
@@ -20,7 +19,6 @@ const settings = ['Profile', 'Account', 'Login', 'Sign up'];
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-    const router = useRouter();
 
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -31,17 +29,12 @@ function ResponsiveAppBar() {
     };
 
     const handleCloseNavMenu = () => {
-        router.push('/signup');
         setAnchorElNav(null);
     };
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-
-    const signUp = () => {
-        router.push('/signup');
-    }
 
     return (
         <HideOnScroll threshold={200}>
@@ -95,9 +88,11 @@ function ResponsiveAppBar() {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
+                                <a href='/signup'>
+                                    <MenuItem key={page}>
+                                        <Typography textAlign="center">{page}</Typography>
+                                    </MenuItem>
+                                </a>
                             ))}
                         </Menu>
                     </Box>
@@ -124,7 +119,7 @@ function ResponsiveAppBar() {
                             <Button
                                 aria-label={page}
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                href='/signup'
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}
@@ -155,9 +150,11 @@ function ResponsiveAppBar() {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={signUp}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
+                                <a href='/signup'>
+                                    <MenuItem key={setting}>
+                                        <Typography textAlign="center">{setting}</Typography>
+                                    </MenuItem>
+                                </a>
                             ))}
                         </Menu>
                     </Box>

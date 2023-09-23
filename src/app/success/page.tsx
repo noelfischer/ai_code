@@ -34,7 +34,7 @@ function Page() {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Typography className={styles.p}>
-              <Typography variant="h5" className={styles.h5}>💬 <span className={styles.span}>Feedback Matters</span></Typography> We value your feedback. In the coming weeks, we&apos;ll reach out to gather your thoughts and insights to improve AI Expert.
+              <Typography variant="h5" className={styles.h5}>💬 <span className={styles.span}>Feedback Matters</span></Typography> We value your feedback. In the coming weeks, we&apos;ll reach out and gather insights to improve AI Expert.
             </Typography>
           </Grid>
         </Grid>
@@ -52,7 +52,7 @@ function Page() {
             Thank you for being an early supporter of AIEX. We can&apos;t wait to embark on this exciting journey with you!<br /><br />
           </Typography>
           <Typography className={styles.p}>
-            Warm regards, <br />
+            <br />Warm regards, <br />
             The AIEX Team
           </Typography>
         </Box>
